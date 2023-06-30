@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangalore Houses Price Predictor</title>
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- jquery cdn link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="app.css">
+    <!-- JS -->
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <!-- background image -->
+    <div class="image"></div>
+    <!-- Left section -->
+    <div class="left">
+        <h1>Real Estate Price Predictor</h1>
+        <h3>Predict Your House Price with an accuracy of more than 80%</h3>
+    </div>
+    <!-- Right section -->
+    <div class="right">
+        <div>
+            <h2>Area(in Square Feet)</h2>
+            <div class="area">
+                <input type="text" id="sqft" placeholder="Type Area in sqft" name="area" value="1000">
+            </div>
+        </div>
+        <div>
+            <h2>BHK</h2>
+            <div class="radioinp">
+                <input type="radio" name="bhk" id="bhk-1" value="1"><label for="bhk-1">1</label>
+                <input type="radio" name="bhk" id="bhk-2" value="2" checked><label for="bhk-2">2</label>
+                <input type="radio" name="bhk" id="bhk-3" value="3"><label for="bhk-3">3</label>
+                <input type="radio" name="bhk" id="bhk-4" value="4"><label for="bhk-4">4</label>
+                <input type="radio" name="bhk" id="bhk-5" value="5"><label for="bhk-5">5</label>
+            </div>
+        </div>
+        <div>
+            <h2>Bathrooms</h2>
+            <div class="radioinp">
+                <input type="radio" name="bath" id="bath-1" value="1"><label for="bath-1">1</label>
+                <input type="radio" name="bath" id="bath-2" value="2" checked><label for="bath-2">2</label>
+                <input type="radio" name="bath" id="bath-3" value="3"><label for="bath-3">3</label>
+                <input type="radio" name="bath" id="bath-4" value="4"><label for="bath-4">4</label>
+                <input type="radio" name="bath" id="bath-5" value="5"><label for="bath-5">5</label>
+            </div>
+        </div>
+        <div>
+            <h2>Location</h2>
+            <div class="location">
+                <select class="location" name="location" id="loc">
+                    <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+                    <option>Electronic City</option>
+                    <option>Indira Nagar</option>
+                </select>
+            </div>
+        </div>
+        <button type="button" onclick="estimate_price()">Predict Price</button>
+        <div class="result" id="price"></div>
+    </div>
+</body>
+
+</html>
